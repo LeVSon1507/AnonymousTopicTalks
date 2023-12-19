@@ -1,0 +1,227 @@
+.notification_container {
+  .MuiDialog-container {
+    justify-content: flex-end;
+    padding: 20px;
+
+    .MuiPaper-root {
+      @media screen and (min-width: 1600px) {
+        width: 400px;
+      }
+      border-radius: 20px;
+      width: 350px;
+      max-width: 100%;
+      max-height: 100%;
+      margin: 0px;
+      height: 100%;
+      .dialog_title {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        font-weight: 600;
+        font-size: 23px;
+        svg {
+          font-size: 22px;
+        }
+      }
+      .tab_notifi {
+        display: flex;
+        gap: 10px;
+        width: 100%;
+        padding: 0px 25px;
+        .active_tab {
+          background: rgb(235, 245, 255);
+          border-radius: 10px;
+          color: rgb(0, 100, 209);
+        }
+        .title {
+          padding-left: 28px;
+          font-size: 17px;
+          font-weight: 600;
+          padding: 5px 8px;
+          cursor: pointer;
+          position: relative;
+          span {
+            position: absolute;
+            right: -5px;
+            top: -7px;
+            color: rgb(207, 84, 84);
+            background: rgb(243, 213, 213);
+            border-radius: 10px;
+            padding: 2px;
+            width: 15px;
+            height: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+      }
+      .no_data {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .box_no_data {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          gap: 10px;
+          span {
+            padding: 20px;
+            border-radius: 50%;
+            background: linear-gradient(#9bc7e4, #dce1e9);
+            svg {
+              font-size: 70px;
+              color: #4f4f99;
+            }
+          }
+          p {
+            font-weight: 600;
+          }
+        }
+      }
+      .dialog_content {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .notifi_item {
+          padding: 8px;
+          cursor: pointer;
+          .group_notifi {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            position: relative;
+            img {
+              width: 60px;
+              height: 60px;
+              object-fit: cover;
+            }
+            span {
+              display: flex;
+              flex-direction: column;
+              p:nth-child(1) {
+                width: 210px;
+                font-size: 15px;
+                font-family: 'Segoe UI Historic', 'Segoe UI', Helvetica, Arial, sans-serif;
+              }
+              p:nth-child(2) {
+                color: rgb(8, 102, 255);
+                font-size: 10px;
+              }
+            }
+            .isread_notifi {
+              position: absolute;
+              font-size: 15px;
+              right: -10px;
+              top: 45%;
+              color: rgb(8, 102, 255);
+            }
+          }
+          .notifi_post {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            position: relative;
+            img {
+              width: 60px;
+              height: 60px;
+              object-fit: cover;
+            }
+            span {
+              .content {
+                width: 180px;
+                font-size: 15px;
+                font-family: 'Segoe UI Historic', 'Segoe UI', Helvetica, Arial, sans-serif;
+              }
+              .time {
+                color: rgb(8, 102, 255);
+                font-size: 10px;
+              }
+            }
+            .isread_notifi {
+              position: absolute;
+              font-size: 15px;
+              right: -10px;
+              top: 45%;
+              color: rgb(8, 102, 255);
+            }
+          }
+        }
+        .notifi_item:hover,
+        .notifi_request:hover {
+          background: aliceblue;
+
+          border-radius: 8px;
+        }
+        .notifi_request {
+          display: flex;
+          gap: 10px;
+          align-items: center;
+          padding: 8px;
+          border-radius: 8px;
+          .avatar {
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            object-fit: cover;
+          }
+          span {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            .option_action {
+              display: flex;
+              gap: 10px;
+              button {
+                padding: 5px;
+                width: 80px;
+                border-radius: 8px;
+                text-transform: capitalize;
+                display: flex;
+                justify-content: center;
+                font-weight: bold;
+              }
+              button:hover {
+                opacity: 0.8;
+              }
+              .cancel_request {
+                color: #000;
+                background: rgb(239, 239, 239);
+                display: flex;
+                gap: 5px;
+                align-items: center;
+                svg {
+                  font-size: 18px;
+                }
+              }
+
+              .accept {
+                background: rgb(0, 149, 246);
+                color: #fafcfb;
+                display: flex;
+                gap: 5px;
+                align-items: center;
+                svg {
+                  font-size: 18px;
+                }
+              }
+            }
+
+            .content {
+              // width: 180px;
+              font-size: 15px;
+              font-family: 'Segoe UI Historic', 'Segoe UI', Helvetica, Arial, sans-serif;
+            }
+            .time {
+              color: rgb(8, 102, 255);
+              font-size: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

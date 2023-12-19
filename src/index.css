@@ -1,0 +1,63 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size:100%;
+}
+
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: Roboto, Helvetica, Arial, Lucida, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  /* line-height: 26px; */
+}
+
+code {
+  font-family: Roboto, Helvetica, Arial, Lucida, sans-serif;
+}
+
+/* ::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 20px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #606ae8;
+  border-radius: 20px;
+}
+::-webkit-scrollbar-thumb {
+  background: #606ae8;
+  border-radius: 20px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 20px;
+} */
+p {
+  font-family: Roboto, Helvetica, Arial, Lucida, sans-serif;
+}
+
+:root {
+  --font-base: 'Cormorant Upright', serif;
+  --font-alt: 'Open Sans', sans-serif;
+  --color-menu-font: rgb(111, 127, 146);
+  --color-golden: #DCCA87;
+  --color-black: #0C0C0C;
+  --color-gray: #f7f7f7;
+  --color-crimson: #F5EFDB;
+  --color-white: #ffff;
+  --main-color: #606ae8;
+  --blue-color: #2f65b9;
+  --sidebar-color: #6f7f92;
+  --item-color: rgb(111, 127, 146);
+  --font-family-common: 'Poppins';
+}

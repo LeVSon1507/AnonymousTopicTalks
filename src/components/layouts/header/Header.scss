@@ -1,0 +1,144 @@
+.header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  padding-top: 8px;
+  .first_header {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    width: 100%;
+    .logo_sidebar {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      height: 90px;
+      img {
+        // width: 54px;
+        // height: 54px;
+        // object-fit: cover;
+        // background: #fff;
+        // border-radius: 15px;
+        // margin: 4px 0px;
+      }
+      .title_logo {
+        p:nth-child(1) {
+          font-size: 23px;
+          color: #000;
+          font-family: Poppins;
+        }
+        p:nth-child(2) {
+          font-family: Poppins;
+          font-size: 16px;
+          color: #fff;
+          font-style: italic;
+          font-weight: 400;
+          line-height: normal;
+          color: #606ae8;
+        }
+      }
+    }
+    .image {
+      display: flex;
+      justify-content: center;
+      .logo_center {
+        object-fit: cover;
+        height: 100px;
+        width: auto;
+      }
+    }
+    .infor_header {
+      color: #000;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      justify-content: flex-end;
+      position: relative;
+      .search {
+        font-size: 25px;
+      }
+      .notifi_icon {
+        position: absolute;
+        top: 26px;
+        right: 184px;
+        color: red;
+        font-size: 15px;
+        background: rgb(231, 186, 186);
+        border-radius: 10px;
+        padding: 2px;
+        width: 15px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      svg {
+        font-size: 20px;
+        cursor: pointer;
+      }
+      .avatar_header {
+        margin-right: -17px;
+        .MuiAvatar-root {
+          width: 50px;
+          height: 50px;
+        }
+      }
+      .name_account {
+        width: 100px;
+      }
+      .menu_box {
+        position: absolute;
+        right: -55px;
+        top: 95px;
+        z-index: 2;
+        background: #fff;
+        border: 1px solid gainsboro;
+        border-radius: 10px;
+        padding: 16px 8px;
+        .item {
+          display: flex;
+          gap: 10px;
+        }
+      }
+    }
+  }
+  .header_option {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    justify-content: center;
+    padding: 10px 0px;
+    border: 1px solid rgb(247, 243, 240);
+    width: 100%;
+    p {
+      text-transform: uppercase;
+      font-size: 13px;
+      color: #000;
+      font-family: Roboto, Helvetica, Arial, Lucida;
+      cursor: pointer;
+      padding: 5px 8px;
+      letter-spacing: 2px;
+    }
+    .selected_navigate,
+    p:hover {
+      color: #fff;
+      background: #8e6e51;
+      border-radius: 8px;
+    }
+  }
+}
+
+.custom-paper {
+  top: 60px !important;
+  right: 180px;
+  left: auto !important;
+  overflow: visible;
+  filter: drop-shadow(0px 2px 8px rgba(0, 0, 0, 0.32));
+  margin-top: 1.5rem;
+  .MuiAvatar-root {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+}

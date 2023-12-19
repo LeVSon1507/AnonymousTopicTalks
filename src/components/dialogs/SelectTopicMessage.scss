@@ -1,0 +1,71 @@
+.select_topic_message_container {
+  &.MuiDialog-root {
+    z-index: 3;
+  }
+  .MuiBackdrop-root {
+    background: rgb(51 47 47 / 65%);
+  }
+  .MuiPaper-root {
+    width: 600px;
+    height: 350px;
+    background: rgb(20, 27, 45);
+    .dialog_content {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      .chat_name_box {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        p {
+          font-size: 20px;
+          font-weight: 600;
+          color: #fff;
+        }
+      }
+      .topic_box {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        height: 300px;
+        .MuiInputBase-root {
+          max-height: 50px;
+          min-width: 120px;
+          color: #000;
+          background: #fff;
+        }
+        .topic_child {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+          width: 80%;
+          .topic_item {
+            display: flex;
+            justify-content: center;
+            padding: 8px 10px;
+            flex-basis: calc(50% - 10px);
+            max-width: 50%;
+            flex-grow: 1;
+            color: #fff;
+            background: #798899;
+            border-radius: 10px;
+            cursor: pointer;
+          }
+          .selected_topic,
+          .topic_item:hover {
+            background: var(--main-color);
+          }
+        }
+      }
+    }
+    .dialog_action {
+      button {
+        background: var(--main-color);
+        color: #fff;
+      }
+      .disable_button {
+        opacity: 0.7;
+      }
+    }
+  }
+}

@@ -1,0 +1,175 @@
+.random_dialog {
+  &.MuiDialog-root {
+    z-index: 3;
+  }
+  .MuiBackdrop-root {
+    background: rgb(51 47 47 / 65%);
+  }
+  .MuiPaper-root {
+    width: 700px;
+    height: 500px;
+    padding-bottom: 10px;
+    max-width: 100%;
+    .dialog_title {
+      text-align: center;
+      p:nth-child(1) {
+        font-weight: 600;
+        color: #000;
+        letter-spacing: 1px;
+        font-size: 20px;
+        font-family: 'Yeseva One', display;
+      }
+      p:nth-child(2) {
+        color: rgb(142, 110, 81);
+        font-weight: 600;
+      }
+    }
+    .loading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 5px;
+      .animate_icon {
+        display: flex;
+        color: #3377d3;
+        gap: 5px;
+        align-items: end;
+        animation: slide 2s infinite linear;
+        svg {
+          font-size: 50px;
+        }
+      }
+      div {
+        width: 200px;
+        border-bottom: 1px solid #3377d3;
+      }
+      p {
+        font-size: 25px;
+        color: #3377d3;
+      }
+    }
+    @keyframes slide {
+      0% {
+        transform: translateX(-100%);
+      }
+      100% {
+        transform: translateX(100%);
+      }
+    }
+    .dialog_content {
+      display: flex;
+      .partner {
+        width: 50%;
+        object-fit: contain;
+      }
+      .selected_topic {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 50%;
+        p:nth-child(1) {
+          text-transform: uppercase;
+          font-size: 20px;
+          letter-spacing: 1px;
+          line-height: 2.6em;
+          color: rgb(81, 129, 142);
+          font-weight: 600;
+        }
+        p:nth-child(2) {
+          text-transform: uppercase;
+          font-size: 11px;
+          letter-spacing: 1px;
+          line-height: 2.6em;
+          color: rgb(142, 110, 81);
+          font-weight: 600;
+        }
+        span {
+          color: #8e6e51;
+          margin-top: -10px;
+        }
+      }
+      .box_random {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        padding: 0px 15px 5px;
+        .chat_name_box {
+          font-size: 20px;
+          font-weight: 600;
+          color: #000;
+        }
+        .topic_box {
+          display: flex;
+          gap: 10px;
+          align-items: center;
+          flex-direction: column;
+
+          .MuiInputBase-root {
+            max-height: 50px;
+            width: 100%;
+            color: #000;
+            background: #fff;
+            .MuiSelect-select {
+              padding: 8px 10px;
+            }
+          }
+        }
+        .topic_child {
+          display: flex;
+          gap: 10px;
+          flex-direction: column;
+          padding: 10px 0px;
+          overflow-y: auto;
+          width: 100%;
+          height: 255px;
+          .topic_item {
+            cursor: pointer;
+            width: 100%;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            background: aliceblue;
+          }
+          .selected_topic,
+          .topic_item:hover {
+            background: #c6dbed;
+          }
+          .load_topic {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 50px;
+            svg {
+              animation: spin 1s infinite linear;
+              font-size: 30px;
+              opacity: 0.8;
+            }
+          }
+          @keyframes spin {
+            from {
+              transform: rotate(0deg);
+            }
+            to {
+              transform: rotate(360deg);
+            }
+          }
+        }
+      }
+    }
+  }
+  .dialog_action {
+    button {
+      background: #8e6e51;
+      color: #fff;
+    }
+    button:hover {
+      opacity: 0.7;
+    }
+    .disable_button {
+      opacity: 0.5;
+    }
+  }
+}

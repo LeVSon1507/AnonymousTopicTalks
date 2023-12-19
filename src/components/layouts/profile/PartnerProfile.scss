@@ -1,0 +1,272 @@
+.partner-profile-container {
+  height: 100%;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0px 50px 50px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-y: 50%;
+  background: rgb(242, 245, 248);
+  background-image: url(../../../assets/images/background1.png);
+  align-items: center;
+  .box_detail_infor_container {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    // max-width: 1420px;
+    padding: 50px 30px;
+    justify-content: center;
+    .box_first {
+      position: relative;
+      min-width: 300px;
+      padding-top: 50px;
+      width: 20%;
+      display: none;
+      .infor_box_container {
+        // position: fixed;
+        box-shadow: 0 8px 32px 0 rgba(22, 24, 26, 0.11);
+        padding: 50px 30px;
+        background: #000;
+        width: 320px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        border-radius: 15px;
+        display: none;
+        .infor_item {
+          p {
+            text-transform: uppercase;
+            color: #fff;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.7);
+          }
+        }
+      }
+    }
+    .box_container {
+      width: 100%;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .title_box {
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+        align-items: center;
+        margin-top: 50px;
+        background: #fff;
+        width: 100%;
+        max-width: 1200px;
+        position: relative;
+        padding: 20px 0px;
+        z-index: 1;
+        border-radius: 10px 10px 0px 0px;
+        .title_backgroud {
+          font-size: 12px;
+          letter-spacing: 2px;
+        }
+        .title_group {
+          font-family: 'Yeseva One', display;
+          font-size: 28px;
+          font-weight: 600;
+          letter-spacing: 1px;
+        }
+        .tab_option {
+          display: flex;
+          padding-top: 10px;
+          gap: 15px;
+
+          button {
+            width: 120px;
+            padding: 10px 15px;
+            border-radius: 0px;
+            color: #000;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            opacity: 0.7;
+          }
+          button:hover {
+            background: #fff;
+            opacity: 1;
+          }
+          .selected {
+            font-weight: 600;
+            opacity: 1;
+            border-top: 2px solid #000;
+          }
+        }
+      }
+      .not_display {
+        width: 100%;
+        max-width: 950px;
+        // border: 1px solid gainsboro;
+
+        position: relative;
+        z-index: 2;
+        margin-top: -8px;
+        padding: 0px 100px;
+        background: #fff;
+        .not_friends {
+          border-top: 2px solid rgb(189, 186, 186);
+          justify-content: center;
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+          width: 100%;
+          align-items: center;
+
+          padding: 50px 0px;
+          svg {
+            font-size: 70px;
+            padding: 15px;
+            border-radius: 50%;
+            border: 1px solid #000;
+          }
+          strong {
+            letter-spacing: 1.5px;
+          }
+          p:nth-child(3),
+          p:nth-child(4) {
+            font-size: 14px;
+            color: #7a7777;
+            width: 100%;
+            text-align: center;
+            padding-left: 5px;
+          }
+        }
+      }
+      .post_container {
+        max-width: 1200px;
+        background: #fff;
+        box-shadow: 0px 20px 90px #f7f3f0;
+        width: 100%;
+
+        border-radius: 0px 0px 10px 10px;
+        padding: 0px 20px 40px 40px;
+        .card_post {
+          position: relative;
+          .image {
+            object-fit: cover;
+            max-width: 365px;
+            max-height: 385px;
+            width: 100%;
+            height: 100%;
+          }
+          .overlay {
+            max-width: 365px;
+            max-height: 385px;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            background: linear-gradient(180deg, transparent 50%, rgba(0, 0, 0, 0.5));
+            span {
+              display: none;
+            }
+            &:hover {
+              cursor: pointer;
+              background: rgba(0, 0, 0, 0.3);
+              span {
+                color: #fff;
+                display: flex;
+                gap: 8px;
+                font-size: 18px;
+              }
+            }
+          }
+        }
+        .load_post {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 80px;
+          svg {
+            animation: spin 1s infinite linear;
+            font-size: 30px;
+            opacity: 0.8;
+          }
+        }
+        @keyframes spin {
+          from {
+            transform: rotate(0deg);
+          }
+          to {
+            transform: rotate(360deg);
+          }
+        }
+        .no_data {
+          max-width: 1200px;
+        }
+
+        .no_data {
+          height: 220px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: #fff;
+          flex-direction: column;
+          width: 100%;
+
+          gap: 10px;
+          svg {
+            font-size: 80px;
+            padding: 20px;
+            border-radius: 50%;
+            border: 2px solid #000;
+          }
+          .title {
+            font-weight: 600;
+            font-size: 25px;
+          }
+          p:nth-child(3) {
+            font-size: 14px;
+            color: #7a7777;
+          }
+        }
+      }
+      .not_yet_data_container {
+        max-width: 950px;
+        padding: 0px 100px;
+        width: 100%;
+        background: #fff;
+        margin-top: -9px;
+        .not_yet_data {
+          height: 220px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-top: 2px solid rgb(189, 186, 186);
+          flex-direction: column;
+          width: 100%;
+
+          gap: 10px;
+          svg {
+            font-size: 80px;
+            padding: 20px;
+            border-radius: 50%;
+            border: 2px solid #000;
+          }
+          .title {
+            font-weight: 600;
+            font-size: 25px;
+          }
+          p:nth-child(3) {
+            font-size: 14px;
+            color: #7a7777;
+          }
+        }
+      }
+    }
+  }
+}
